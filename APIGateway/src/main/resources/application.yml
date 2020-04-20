@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: APIGateway
+    
+server:
+  port: 2005
+
+zuul:
+  routes:
+    client1:
+      service-id: eurekaclient1
+  host:    connect-timeout-millis: 2000
+    socket-timeout-millis: 5000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        
